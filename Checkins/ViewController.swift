@@ -17,7 +17,7 @@ extension NSLayoutConstraint {
     }
 
     @IBInspectable
-    /// 是否适配屏幕，以375宽度为准
+    /// 是否适配屏幕，以375宽度为准计算约束constant
     var isAdaptScreen: Bool {
         get {
             return withUnsafePointer(to: Key.value) { pointer in
