@@ -13,6 +13,7 @@
 		84A19E202C69A8880056E2A4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E1F2C69A8880056E2A4 /* Base */; };
 		84A19E222C69A8890056E2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E212C69A8890056E2A4 /* Assets.xcassets */; };
 		84A19E252C69A8890056E2A4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E242C69A8890056E2A4 /* Base */; };
+		84A19E2E2C69F7A00056E2A4 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 84A19E2D2C69F7A00056E2A4 /* LookinServer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A19E2E2C69F7A00056E2A4 /* LookinServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = Checkins;
+			packageProductDependencies = (
+				84A19E2D2C69F7A00056E2A4 /* LookinServer */,
+			);
 			productName = Checkins;
 			productReference = 84A19E152C69A8880056E2A4 /* Checkins.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 84A19E0C2C69A8880056E2A4;
+			packageReferences = (
+				84A19E2C2C69F7A00056E2A4 /* XCRemoteSwiftPackageReference "LookinServer" */,
+			);
 			productRefGroup = 84A19E162C69A8880056E2A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +308,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +337,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84A19E2C2C69F7A00056E2A4 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84A19E2D2C69F7A00056E2A4 /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A19E2C2C69F7A00056E2A4 /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84A19E0D2C69A8880056E2A4 /* Project object */;
 }
