@@ -1,6 +1,15 @@
 {
-  "originHash" : "9e550624eed15ad7b062bd3726de752bcc6a607509e1ecffc086cfac7fbfbf80",
+  "originHash" : "6e3caf322e67d88ad3a8509ddac882a955a91953c0003f89d0c4ffb94e42b361",
   "pins" : [
+    {
+      "identity" : "eureka",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xmartlabs/Eureka.git",
+      "state" : {
+        "revision" : "028ef8e3191a256b8f6b8bb6b9496efcb0762dbc",
+        "version" : "5.5.0"
+      }
+    },
     {
       "identity" : "lookinserver",
       "kind" : "remoteSourceControl",
@@ -8,6 +17,51 @@
       "state" : {
         "revision" : "e553d1b689d147817dc54ad5c28fcff71e860101",
         "version" : "1.2.8"
+      }
+    },
+    {
+      "identity" : "lottie-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-spm.git",
+      "state" : {
+        "revision" : "3bd43e12d6fb54654366a61f7cfaca787318b8ce",
+        "version" : "4.4.1"
+      }
+    },
+    {
+      "identity" : "mbprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jdg/MBProgressHUD.git",
+      "state" : {
+        "revision" : "bca42b801100b2b3a4eda0ba8dd33d858c780b0d",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "refresh",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitee.com/egiosa/refresh.git",
+      "state" : {
+        "revision" : "c3651b9e125b4304e6ad3a688a2c2b7d3e13c1e6",
+        "version" : "1.1.7"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "b06a8c8596e4c3e8e7788e08e720e3248563ce6a",
+        "version" : "6.7.1"
+      }
+    },
+    {
+      "identity" : "ubase",
+      "kind" : "remoteSourceControl",
+      "location" : "http://gitlab.youzy.cn/ios-framework/UBase.git",
+      "state" : {
+        "revision" : "d3dfcf15638463f4a78dc09601dd15692217c63b",
+        "version" : "0.6.8"
       }
     }
   ],

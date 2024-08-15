@@ -14,6 +14,11 @@
 		84A19E222C69A8890056E2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E212C69A8890056E2A4 /* Assets.xcassets */; };
 		84A19E252C69A8890056E2A4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E242C69A8890056E2A4 /* Base */; };
 		84A19E2E2C69F7A00056E2A4 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 84A19E2D2C69F7A00056E2A4 /* LookinServer */; };
+		84A19E342C6B48450056E2A4 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A19E332C6B48450056E2A4 /* LotteryViewController.swift */; };
+		84A19E372C6B48630056E2A4 /* UBase in Frameworks */ = {isa = PBXBuildFile; productRef = 84A19E362C6B48630056E2A4 /* UBase */; };
+		84A19E392C6B48840056E2A4 /* LotteryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E382C6B48840056E2A4 /* LotteryViewController.xib */; };
+		84A19E3B2C6B4F420056E2A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A19E3A2C6B4F420056E2A4 /* TabViewController.swift */; };
+		84A19E3D2C6C5ED10056E2A4 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A19E3C2C6C5ED10056E2A4 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,10 @@
 		84A19E212C69A8890056E2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A19E242C69A8890056E2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A19E262C69A8890056E2A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A19E332C6B48450056E2A4 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		84A19E382C6B48840056E2A4 /* LotteryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LotteryViewController.xib; sourceTree = "<group>"; };
+		84A19E3A2C6B4F420056E2A4 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		84A19E3C2C6C5ED10056E2A4 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A19E2E2C69F7A00056E2A4 /* LookinServer in Frameworks */,
+				84A19E372C6B48630056E2A4 /* UBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +71,12 @@
 				84A19E182C69A8880056E2A4 /* AppDelegate.swift */,
 				84A19E1A2C69A8880056E2A4 /* SceneDelegate.swift */,
 				84A19E1C2C69A8880056E2A4 /* ViewController.swift */,
+				84A19E3A2C6B4F420056E2A4 /* TabViewController.swift */,
+				84A19E332C6B48450056E2A4 /* LotteryViewController.swift */,
+				84A19E382C6B48840056E2A4 /* LotteryViewController.xib */,
 				84A19E1E2C69A8880056E2A4 /* Main.storyboard */,
 				84A19E212C69A8890056E2A4 /* Assets.xcassets */,
+				84A19E3C2C6C5ED10056E2A4 /* Color.xcassets */,
 				84A19E232C69A8890056E2A4 /* LaunchScreen.storyboard */,
 				84A19E262C69A8890056E2A4 /* Info.plist */,
 			);
@@ -87,6 +101,7 @@
 			name = Checkins;
 			packageProductDependencies = (
 				84A19E2D2C69F7A00056E2A4 /* LookinServer */,
+				84A19E362C6B48630056E2A4 /* UBase */,
 			);
 			productName = Checkins;
 			productReference = 84A19E152C69A8880056E2A4 /* Checkins.app */;
@@ -118,6 +133,7 @@
 			mainGroup = 84A19E0C2C69A8880056E2A4;
 			packageReferences = (
 				84A19E2C2C69F7A00056E2A4 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				84A19E352C6B48630056E2A4 /* XCRemoteSwiftPackageReference "UBase" */,
 			);
 			productRefGroup = 84A19E162C69A8880056E2A4 /* Products */;
 			projectDirPath = "";
@@ -133,7 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A19E392C6B48840056E2A4 /* LotteryViewController.xib in Resources */,
 				84A19E222C69A8890056E2A4 /* Assets.xcassets in Resources */,
+				84A19E3D2C6C5ED10056E2A4 /* Color.xcassets in Resources */,
 				84A19E252C69A8890056E2A4 /* Base in Resources */,
 				84A19E202C69A8880056E2A4 /* Base in Resources */,
 			);
@@ -146,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A19E342C6B48450056E2A4 /* LotteryViewController.swift in Sources */,
 				84A19E1D2C69A8880056E2A4 /* ViewController.swift in Sources */,
 				84A19E192C69A8880056E2A4 /* AppDelegate.swift in Sources */,
+				84A19E3B2C6B4F420056E2A4 /* TabViewController.swift in Sources */,
 				84A19E1B2C69A8880056E2A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +403,14 @@
 				minimumVersion = 1.2.8;
 			};
 		};
+		84A19E352C6B48630056E2A4 /* XCRemoteSwiftPackageReference "UBase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://gitlab.youzy.cn/ios-framework/UBase.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -390,6 +418,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84A19E2C2C69F7A00056E2A4 /* XCRemoteSwiftPackageReference "LookinServer" */;
 			productName = LookinServer;
+		};
+		84A19E362C6B48630056E2A4 /* UBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A19E352C6B48630056E2A4 /* XCRemoteSwiftPackageReference "UBase" */;
+			productName = UBase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

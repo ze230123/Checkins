@@ -9,6 +9,10 @@ import UIKit
 
 struct Screen {
     static let width = UIScreen.main.bounds.width
+
+    static func adapt(_ value: CGFloat) -> CGFloat {
+        return value * Screen.width / 375
+    }
 }
 
 extension NSLayoutConstraint {
