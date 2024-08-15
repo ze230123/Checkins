@@ -24,11 +24,6 @@ class LotteryViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        lotteryView.bringSubviewToFront(button)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         let items = [
             PrizesView.Item(text: "下次努力 0", image: .checkinsLotteryPrizesNullIcon),
             PrizesView.Item(text: "资料包 1", image: .checkinsLotteryPrizesNullIcon),
@@ -37,7 +32,11 @@ class LotteryViewController: BaseViewController {
             PrizesView.Item(text: "志愿卡 4", image: .checkinsLotteryPrizesVipIcon),
             PrizesView.Item(text: "60元优惠券 5", image: .checkinsLotteryPrizesCouponsIcon)
         ]
-        lotteryView.configure(items: items)
+        lotteryView.items = items
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     @IBAction func lotteryAction() {
@@ -58,6 +57,12 @@ class LotteryView: UIView {
     private var isAnimating: Bool = false
     private var rotationAngle: CGFloat = 0
 
+    var items: [PrizesView.Item] = [] {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         prepare()
@@ -66,6 +71,32 @@ class LotteryView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         prepare()
+    }
+
+    override func draw(_ rect: CGRect) {
+        let views = contentView.subviews.filter { $0 is PrizesView }
+        views.forEach { $0.removeFromSuperview() }
+
+        let height = rect.height / 2 - 30
+        let width = tan(radian(30)) * height * 2
+
+        debugPrint("prizes View size: ", width, height)
+
+        var angle: CGFloat = 0
+
+        for item in items {
+            let prizesView = PrizesView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+            prizesView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
+            prizesView.center = CGPoint(x: rect.height / 2, y: rect.height / 2)
+            prizesView.configure(item: item)
+
+            prizesView.transform = CGAffineTransform(rotationAngle: radian(angle))
+            contentView.addSubview(prizesView)
+
+            angle += 60
+        }
+
+        contentView.transform = CGAffineTransform(rotationAngle: radian(180))
     }
 }
 
@@ -87,29 +118,6 @@ extension LotteryView {
             imageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
-    }
-
-    func configure(items: [PrizesView.Item]) {
-        let height = contentView.frame.height / 2 - 30
-        let width = tan(radian(30)) * height * 2
-
-        debugPrint("prizes View size: ", width, height)
-
-        var angle: CGFloat = 0
-
-        for item in items {
-            let prizesView = PrizesView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-            prizesView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
-            prizesView.center = CGPoint(x: contentView.frame.width / 2, y: contentView.frame.height / 2)
-            prizesView.configure(item: item)
-
-            prizesView.transform = CGAffineTransform(rotationAngle: radian(angle))
-            contentView.addSubview(prizesView)
-
-            angle += 60
-        }
-
-        contentView.transform = CGAffineTransform(rotationAngle: radian(180))
     }
 
     func start(to idx: Int) {
